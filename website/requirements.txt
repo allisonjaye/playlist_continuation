@@ -4,5 +4,4 @@ matplotlib==3.4.1
 pandas==1.2.3
 scikit-learn
 scipy
-collections==3.7
 pickle
