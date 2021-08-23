@@ -3,3 +3,6 @@ streamlit==0.76.0
 matplotlib==3.4.1
 pandas==1.2.3
 scikit-learn
+scipy
+collections
+pickle
