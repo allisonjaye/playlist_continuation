@@ -7,7 +7,7 @@ from scipy.sparse import load_npz
 from collections import Counter
 import pickle
 
-data = pd.read_pickle('data.pkl')
+data = pd.read_pickle('website/data.pkl')
 
 st.title("Please Don't Stop The Music:")
 st.header("A Playist Continuation Program")
@@ -42,8 +42,8 @@ with st.form('my form'):
             print(components.iframe(f"https://open.spotify.com/embed/track/{track4}", height=80, width=300))
             print(components.iframe(f"https://open.spotify.com/embed/track/{track5}", height=80, width=300))
         with col2:
-            data2 = pd.read_pickle('data2.pkl')
-            sparse = load_npz('sparse2.npz')
+            data2 = pd.read_pickle('website/data2.pkl')
+            sparse = load_npz('website/sparse2.npz')
             model_knn = NearestNeighbors(metric='cosine', algorithm='brute', n_neighbors=20, n_jobs=-1)
 
             model_knn.fit(sparse)
