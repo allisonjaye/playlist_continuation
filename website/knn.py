@@ -11,7 +11,7 @@ data = pd.read_pickle('website/data.pkl')
 
 st.title("Please Don't Stop The Music:")
 st.header("A Playist Continuation Program")
-with st.form('my form'):
+with st.form(key='my form'):
     random_playlists = ['Throwbacks', 'Country jams', 'Classic Rock', 'Christmas', 'Disney']
     p_name = st.selectbox('Choose a Playlist', (random_playlists))
     playlist_index = data[data.playlist_name == p_name]["pid"].values[0]
